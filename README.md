@@ -2,11 +2,11 @@
 A discord bot made in JS, using the Discord.js library.
 
 # Commands:
-:Help - Shows this menu
-:Latency - Time message recieved - Time message sent
-:User - Get information on a user
-:Server - Get information on this server
-:ID - Get the ID of a user or bot
+:Help - Shows this menu\n
+:Latency - Time message recieved - Time message sent\n
+:User - Get information on a user\n
+:Server - Get information on this server\n
+:ID - Get the ID of a user or bot\n
 
 # Join the development server:
 https://discord.gg/xUMfhTA
