@@ -1,0 +1,16 @@
+{
+  "name": "alliad",
+  "version": "1.0.0",
+  "main": "alliad.js",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "discord.js": "^11.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "crngegod",
+  "license": "ISC",
+  "description": ""
+}
