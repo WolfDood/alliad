@@ -6,8 +6,6 @@ const chalk = require("chalk");
 const config = require("./src/config.json");
 const rs = require("./src/json/responses.json");
 const help = require("./src/embeds/help.json");
-const server = require("./src/embeds/server.json");
-const user = require("./src/embeds/user.json");
 const jokes = require("./src/json/funnyjoke.json");
 const eightball = require("./src/json/8ball.json");
 
