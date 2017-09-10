@@ -1,6 +1,11 @@
 # alliad
 A discord bot made in JS, using the Discord.js library.
 
+## Prerequisites:
+- Node.js
+- Chalk
+- Nodemon
+
 ## Commands:
 ::Help - Shows this menu  
 ::Latency - Time message recieved - Time message sent  
