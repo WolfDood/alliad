@@ -19,4 +19,8 @@ https://discord.gg/xUMfhTA
 ## Changelog:
 
 ### Version: 1.0.0
-- Initial Build
+- Initial Build  
+  
+### Version: 1.1.0  
+  
+- Added "fun" and misc commands  
