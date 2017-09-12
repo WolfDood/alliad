@@ -8,6 +8,7 @@ const rs = require("./src/json/responses.json");
 const help = require("./src/embeds/help.json");
 const jokes = require("./src/json/funnyjoke.json");
 const eightball = require("./src/json/8ball.json");
+const greetings = require("./src/json/greetings.json");
 
 // Variables
 const prefix = config.prefix;
@@ -24,12 +25,14 @@ client.on("ready", () => {
 
 // Upon joining a server
 client.on("guildCreate", guild => {
-	console.log(chalk.green(`[INFO] I have been invited to ${guild.name}`));
+	guildinvite = console.log(chalk.green(`[INFO] I have been invited to ${guild.name}`));
+	client.channels.get("355240822330884108").send(guildinvite);
 });
 
 // Upon being removed from a server
 client.on("guildDelete", guild => {
-	console.log(chalk.red(`[INFO] I have been removed from ${guild.name}`));
+	guildremove = console.log(chalk.red(`[INFO] I have been removed from ${guild.name}`));
+	client.channels.get("355240822330884108").send(guildremove);
 });
 
 // Main
@@ -45,7 +48,7 @@ client.on("message", message => {
 	var realcommand = true;
 
 	if (command === "help") {
-		let helpembed = new Discord.RichEmbed().setAuthor(help.author).setColor(config.theme).setDescription(help.desc).setTitle(help.cmtitle).addField(help.generaltitle, help.general).addField(help.funtitle, help.fun).addField(help.servertitle, help.server)/*.setThumbnail(client.user.avatarURL)*/.setFooter(config.credits);
+		let helpembed = new Discord.RichEmbed().setAuthor(help.author).setColor(config.theme).setDescription(help.desc).setTitle(help.cmtitle).addField(help.generaltitle, help.general).addField(help.funtitle, help.fun).addField(help.misctitle, help.misc).addField(help.servertitle, help.server)/*.setThumbnail(client.user.avatarURL)*/.setFooter(config.credits);
 		message.channel.send(helpembed);
 	} else if (command === "latency") {
 		message.channel.send(`Latency: \`${Date.now() - message.createdTimestamp} ms\``);
@@ -108,6 +111,13 @@ client.on("message", message => {
 	} else if (command === "8ball") {
 		if (!args[0]) return message.channel.send("Please ask a question.");
 		message.channel.send(eightball[Object.keys(eightball)[Math.floor(Math.random()*Object.keys(eightball).length)]]);
+	} else if (command === "say") {
+    	message.delete().catch(O_o=>{});
+    	message.channel.send(argsspc);
+	} else if (command === "test") {
+		message.channel.send("Bot is active.")
+	} else if (command === "greetings") {
+		message.channel.send(greetings[Object.keys(greetings)[Math.floor(Math.random()*Object.keys(greetings).length)]]);
 	} else {
 		realcommand = false;
 	}
