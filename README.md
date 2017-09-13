@@ -4,7 +4,7 @@ A discord bot made in JS, using the Discord.js library.
 ## Prerequisites:
 - Node.js
 - Chalk
-- Nodemon
+- Nodemon (Optional)
 
 ## Commands:  
 ## General:  
