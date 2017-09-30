@@ -127,7 +127,7 @@ client.on("message", message => {
 });
 
 try {
-	client.login(config.token);
+	client.login(process.env.BOT_TOKEN);
 } catch(e) {
 	console.log(chalk.red(`[ERROR] ${e}`));
 }
