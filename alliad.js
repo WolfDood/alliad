@@ -118,7 +118,13 @@ client.on("message", message => {
 		message.channel.send("Bot is active.")
 	} else if (command === "greetings") {
 		message.channel.send(greetings[Object.keys(greetings)[Math.floor(Math.random()*Object.keys(greetings).length)]]);
-	} else {
+	}  else if (command === "eval") {
+		if (!config.controllers.includes(message.author.id)) return message.channel.send(rs.noperms);
+		try {
+			eval(argsspc);
+ 		} catch(err) {
+ 			message.channel.send("```" + err + "```");
+ 	} else {
 		realcommand = false;
 	}
 	if (realcommand) {
