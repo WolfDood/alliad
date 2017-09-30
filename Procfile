@@ -1,1 +1,1 @@
-worker: node kobe-bot.js
+worker: node alliad.js
