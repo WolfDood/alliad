@@ -122,6 +122,7 @@ client.on("message", message => {
 			eval(argsspc);
  		} catch(err) {
  			message.channel.send("```" + err + "```");
+		}
  	} else {
 		realcommand = false;
 	}
