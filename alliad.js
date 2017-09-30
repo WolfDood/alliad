@@ -67,16 +67,16 @@ client.on("message", message => {
 		let serverembed = new Discord.RichEmbed().setAuthor("Server Info").setColor(config.theme).setThumbnail(message.guild.iconURL).addField("Name", message.guild.name).addField("Members", message.guild.memberCount).addField("Owner", message.guild.owner).addField("Date Created", message.guild.createdAt).addField("Region", message.guild.region);
 		message.channel.send(serverembed);
 	} else if (command === "id") {
-        if (!args[0]) {
-            message.channel.send(message.author.id);
-        } else {
-            try {
-                userIDToGet = message.mentions.users.first();
-                message.channel.send(userIDToGet.id);
-            } catch(e) {
-                message.channel.send("Please mention a user.")
-            }
-        }
+		if (!args[0]) {
+		    message.channel.send(message.author.id);
+		} else {
+		    try {
+			userIDToGet = message.mentions.users.first();
+			message.channel.send(userIDToGet.id);
+		    } catch(e) {
+			message.channel.send("Please mention a user.")
+		    }
+		}
 	} else if (command === "setgame") {
 		if (config.controllers.includes(message.author.id)) {
 			gameName = argsspc;
@@ -110,13 +110,13 @@ client.on("message", message => {
 		if (!args[0]) return message.channel.send("Please ask a question.");
 		message.channel.send(eightball[Object.keys(eightball)[Math.floor(Math.random()*Object.keys(eightball).length)]]);
 	} else if (command === "say") {
-    	message.delete().catch(O_o=>{});
-    	message.channel.send(argsspc);
+    		message.delete().catch(O_o=>{});
+    		message.channel.send(argsspc);
 	} else if (command === "test") {
 		message.channel.send("Bot is active.")
 	} else if (command === "greetings") {
 		message.channel.send(greetings[Object.keys(greetings)[Math.floor(Math.random()*Object.keys(greetings).length)]]);
-	}  else if (command === "eval") {
+	} else if (command === "eval") {
 		if (!config.controllers.includes(message.author.id)) return message.channel.send(rs.noperms);
 		try {
 			eval(argsspc);
