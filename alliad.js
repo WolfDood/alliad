@@ -56,15 +56,13 @@ client.on("message", message => {
 		let userembed;
 		if (!args[0]) {
             userembed = new Discord.RichEmbed().setAuthor(`${message.author.username}'s Info`).setColor(config.theme).setThumbnail(message.author.avatarURL).addField("Full Username", `${message.author.username}#${message.author.discriminator}`).addField("ID", message.author.id).addField("Date Created", message.author.createdAt);
-        } else {
             try {
                 userIDToGet = message.mentions.users.first();
                 userembed = new Discord.RichEmbed().setAuthor(`${userIDToGet.username}'s Info`).setColor(config.theme).setThumbnail(userIDToGet.avatarURL).addField("Full Username", `${userIDToGet.username}#${userIDToGet.discriminator}`).addField("ID", userIDToGet.id).addField("Date Created", userIDToGet.createdAt);
+		message.channel.send(userembed);
             } catch(e) {
                 message.channel.send("Please mention a user.");
-            }
-        }
-		message.channel.send(userembed);
+	    }
 	} else if (command === "server") {
 		let serverembed = new Discord.RichEmbed().setAuthor("Server Info").setColor(config.theme).setThumbnail(message.guild.iconURL).addField("Name", message.guild.name).addField("Members", message.guild.memberCount).addField("Owner", message.guild.owner).addField("Date Created", message.guild.createdAt).addField("Region", message.guild.region);
 		message.channel.send(serverembed);
