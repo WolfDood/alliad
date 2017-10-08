@@ -15,3 +15,4 @@
 ## Miscellaneous:  
 ::Say - Self Explanatory  
 ::Test - Use this to check if the bot is active  
+::InviteMe - Send an invite that you can use to invite Alliad to your server
