@@ -32,5 +32,7 @@ https://discord.gg/xUMfhTA
 - Initial Build  
   
 ### Version: 1.1.0  
-  
 - Added "fun" and misc commands  
+  
+#### - Version: 1.1.0
+- Added "inviteme" command
