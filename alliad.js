@@ -25,14 +25,12 @@ client.on("ready", () => {
 
 // Upon joining a server
 client.on("guildCreate", guild => {
-	guildinvite = console.log(chalk.green(`[INFO] I have been invited to ${guild.name}`));
-	client.channels.get("355240822330884108").send(guildinvite);
+	console.log(chalk.green(`[INFO] I have been invited to ${guild.name}`));
 });
 
 // Upon being removed from a server
 client.on("guildDelete", guild => {
-	guildremove = console.log(chalk.red(`[INFO] I have been removed from ${guild.name}`));
-	client.channels.get("355240822330884108").send(guildremove);
+	console.log(chalk.red(`[INFO] I have been removed from ${guild.name}`));
 });
 
 // Main
@@ -124,7 +122,9 @@ client.on("message", message => {
  		} catch(err) {
  			message.channel.send("```" + err + "```");
 		}
- 	} else {
+ 	} else if (command === "inviteme") {
+		message.channel.send("**Here you go,**\nhttps://discordapp.com/oauth2/authorize?client_id=355074126454718474&scope=bot&permissions=0");
+	} else {
 		realcommand = false;
 	}
 	if (realcommand) {
