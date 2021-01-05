@@ -1,4 +1,4 @@
-// Alliad, made by crngegod
+// Alliad, made by kaubu
 
 // Requirements
 const Discord = require("discord.js");
